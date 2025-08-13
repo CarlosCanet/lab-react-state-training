@@ -3,7 +3,7 @@ import { useState } from "react";
 function Carousel({ images }) {
   const [imageIndex, setimageIndex] = useState(0);
 
-  const handleClickLeft = () => setimageIndex((imageIndex - 1) % images.length);
+  const handleClickLeft = () => setimageIndex((imageIndex - 1 + images.length) % images.length);
   const handleClickRight = () => setimageIndex((imageIndex + 1) % images.length);
 
   return (
